@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey | Microilience</title>
+    <title>Survey | Microlience</title>
     <link rel="stylesheet" href="../static/css/styles.css">
     <link rel="stylesheet" href="../static/css/survey.css">
 
@@ -12,14 +12,82 @@
     <link 
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400&family=Nunito+Sans:wght@300;400&display=swap" 
         rel="stylesheet">
-    <style>
-        body {
-            background-image: url(../hackathon-microilience-2025/static/images/tree.jpg);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-    </style>
+ <style>
+
+  /* --- Clean, Minimal Survey Styles --- */
+  body.survey-page {
+    background-color: var(--background-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+  }
+
+  .survey-overlay {
+    background: none;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .question {
+    text-align: center;
+    font-size: 1.15rem;
+    color: #1e293b;
+    width: 80%;
+  }
+
+  .question input {
+    display: block;
+    margin: 0.8rem auto 0;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    width: 60%;
+    background: white;
+    color: #111;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .question input:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 6px var(--accent-color);
+  }
+
+  button[type="submit"] {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+  }
+
+  button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+  }
+
+    form {
+      text-align: center;
+    }
+
+</style>    
 </head>
 
 <body class="survey-page">
@@ -27,7 +95,7 @@
     <header class="main-header">
         <img src="../static/images/navbanner2.jpg" alt="Header Banner" class="header-bg">
         <div class="header-content">
-            <h1 class="logo">Microilience</h1>
+            <h1 class="logo">Microlience</h1>
             <nav class="nav-bar">
                 <a href="login.html">Login</a>
                 <a href="home.html">Home</a>
@@ -39,15 +107,15 @@
     </header>
 <form action="/surveyAnswers" method="POST">
     <main class="survey-overlay">
-        <div class="quiz-container">
-            <div class="question active">
+         <div class="quiz-container">
+          <div class="question">
               How many minutes is your shower?<br>
-              <input type="number" name="shower time" placeholder="Type your answer here">
+              <input type="number" name="showerTime" placeholder="Type your answer here">
           </div>
 
           <div class="question">
               How many days a week do you drive your car?<br>
-              <input type="number" name="drive time" min="0" max="7" placeholder="Type your answer here">
+              <input type="number" name="driveTime" min="0" max="7" placeholder="Type your answer here">
           </div>
 
           <div class="question">
@@ -59,21 +127,12 @@
               How frequently do you recycle, enter 1 through 5 (1 being never, 5 being everyday):<br>
               <input type="number" name="recycle" min="1" max="5" placeholder="Type your answer here">
           </div>
+      </div>
 
-            <button class="arrow-left" id="prevBtn">
-                <img src="../static/images/arrow-left.png" alt="Previous">
-            </button>
-
-            <button class="arrow-right" id="nextBtn">
-                <img src="../static/images/arrow-right.png" alt="Next">
-            </button>
-        </div>
-         <form action="weeklyreport.html">
+  <form action="home.html">
     <button type="submit">SUBMIT</button>
   </form>
+  </form>
     </main>
-</form>
-    <script src="../static/js/survey.js"></script>
-
 </body>
 </html>
