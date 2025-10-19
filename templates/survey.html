@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey | Microilience</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/survey.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400&family=Nunito+Sans:wght@300;400&display=swap" 
+        rel="stylesheet">
+</head>
+
+<body class="survey-page">
+
+    <header class="main-header">
+        <img src="../static/images/navbanner2.jpg" alt="Header Banner" class="header-bg">
+        <div class="header-content">
+            <h1 class="logo">Microilience</h1>
+            <nav class="nav-bar">
+                <a href="login.html">Login</a>
+                <a href="home.html">Home</a>
+                <a href="profile.html">Profile</a>
+                <a href="weeklyreport.html">Report</a>
+                <a href="survey.html" class="active">Survey</a>
+            </nav>
+        </div>
+    </header>
+<form action="/surveyAnswers" method="POST">
+    <main class="survey-overlay">
+        <div class="quiz-container">
+            <div class="question active">
+              How many minutes is your shower?<br>
+              <input type="number" name="shower time" placeholder="Type your answer here">
+          </div>
+
+          <div class="question">
+              How many days a week do you drive your car?<br>
+              <input type="number" name="drive time" min="0" max="7" placeholder="Type your answer here">
+          </div>
+
+          <div class="question">
+              What do you keep your thermostat at during the summer?<br>
+              <input type="number" name="temp" min="0" placeholder="Type your answer here">
+          </div>
+
+          <div class="question">
+              How frequently do you recycle, enter 1 through 5 (1 being never, 5 being everyday):<br>
+              <input type="number" name="recycle" min="1" max="5" placeholder="Type your answer here">
+          </div>
+
+            <button class="arrow-left" id="prevBtn">
+                <img src="../static/images/arrow-left.png" alt="Previous">
+            </button>
+
+            <button class="arrow-right" id="nextBtn">
+                <img src="../static/images/arrow-right.png" alt="Next">
+            </button>
+        </div>
+         <form action="weeklyreport.html">
+    <button type="submit">SUBMIT</button>
+  </form>
+    </main>
+</form>
+    <script src="../static/js/survey.js"></script>
+
+</body>
+</html>
