@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Report | Microilience</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400&family=Nunito+Sans:wght@300;400&display=swap" 
+        rel="stylesheet">
+</head>
+
+<body class="weekly-page">
+
+    <header class="main-header">
+        <img src="../static/images/navbanner2.jpg" alt="Header Banner" class="header-bg">
+        <div class="header-content">
+            <h1 class="logo">Microilience</h1>
+            <nav class="nav-bar">
+                <a href="login.html">Login</a>
+                <a href="home.html">Home</a>
+                <a href="profile.html">Profile</a>
+                <a href="weeklyreport.html" class="active">Report</a>
+                <a href="survey.html">Survey</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="weekly-content">
+        <section class="weekly-container">
+            <h2 class="weekly-title">Weekly Eco Checklist</h2>
+
+            <div class="list">
+                <label>
+                    <input type="checkbox">
+                    <i></i>
+                    <span>Reduce your daily shower time</span>
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    <i></i>
+                    <span>Use public transportation at least once this week</span>
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    <i></i>
+                    <span>Use a reusable water bottle</span>
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    <i></i>
+                    <span>Unplug unused electronics to save energy</span>
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    <i></i>
+                    <span>Recycle or compost your waste properly</span>
+                </label>
+            </div>
+
+            <form action="/submitReport" method="POST">
+                <button type="submit" class="btn-submit">Submit Report</button>
+            </form>
+
+        </section>
+    </main>
+
+</body>
+</html>
